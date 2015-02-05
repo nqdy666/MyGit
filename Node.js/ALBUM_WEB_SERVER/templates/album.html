@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="album_page">
+        <p>There are {{photos.length}} photos in this album</p>
+        {{#photos}}
+        <div id="photos">
+            <div class="photo">
+                <div class="photo_holder">
+                    <img src="{{url}}" border="0">
+                </div>
+                <div class="photo_desc"><p>{{desc}}</p></div>
+            </div>
+        </div>
+        <div style="clear: left"></div>
+        {{/photos}}
+        {{^photos}}
+            <p>This album doesn't have any photos in it, Sorry.</p>
+        {{/photos}}
+    </div>
+</body>
+</html>
